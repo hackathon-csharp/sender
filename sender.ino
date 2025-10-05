@@ -112,9 +112,7 @@ void setMessage(const std::string& mes) {
     std::cout << "time: " << command.duration << " : level: "
               << lightLevelToString(command.value) << '\n';
   }
-  if (v.size() < N) {
-    v.push_back({datapack::LightLevel::Off, 15000});
-  }
+
 
   lstTimer = millis();
   id = 0;
@@ -194,7 +192,7 @@ void setup() {
   digitalWrite(LED_GREEN, LOW);
   digitalWrite(LED_BLUE, LOW);
 
-  datapack::duration = 300;
+  datapack::duration = 450;
   datapack::min_duration = 60;
 
   initServer();
